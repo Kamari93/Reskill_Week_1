@@ -1,0 +1,359 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 
+:root is where you declare and initialize global vars that you can 
+reuse throughout your stylesheet */
+:root {
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #5518AB;
+    --logo-color: #C69749;
+    --bg-nav-color: #C7BCA1;
+    --bg-hover-color: #856C8B;
+
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color)
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    /* position: fixed; */
+    background-color: var(--bg-nav-color)
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    color: var(--logo-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.7 rem;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+/* when the window is at a certain size this tells how to display */
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 37vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+
+    }
+
+    .navbar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--text-color);
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+    color: #5518AB;
+}
+
+.title-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+    color: #5518AB;
+}
+
+.ad h1:hover {
+    background-color: var(--bg-hover-color);
+    color: var(--bg-nav-color);
+    cursor: pointer;
+    border-radius: 15px;
+    transform: scale(2.5);
+    transition: all 2s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+.container-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    /* margin-bottom: 50px; */
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--logo-color);
+    width: 270px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-image {
+    /* background-color: beige; */
+    height: 220px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.card:hover {
+    background-color: var(--bg-hover-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+
+}
+
+.card a:hover {
+    color: var(--bg-nav-color);
+}
+
+
+.pic-1 {
+    background-image: url('./pics/Internet.jpeg');
+}
+
+.pic-2 {
+    background-image: url('./pics/Larry2.jpeg');
+}
+
+.pic-3 {
+    background-image: url('./pics/Sonder.jpeg');
+}
+
+.pic-4 {
+    background-image: url('./pics/Nipsey.jpeg');
+}
+
+.pic-5 {
+    background-image: url('./pics/Fire.jpeg');
+}
+
+.pic-6 {
+    background-image: url('./pics/Devs.jpeg');
+}
+
+.pic-7 {
+    background-image: url('./pics/Headspace.png');
+}
+
+.pic-8 {
+    background-image: url('./pics/Ancient.jpeg');
+}
+
+footer p {
+    padding: 0;
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    margin: 1em 0;
+}
+
+footer ul li a {
+    padding: .5em;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 100ms;
+}
+
+footer ul li a:hover {
+    color: var(--main-color);
+}
+
+footer {
+    width: 100%;
+    background: var(--bg-nav-color);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    padding: .5em;
+    font-size: 1.2rem;
+    margin-top: 100px;
+    /* margin-bottom: 10px; */
+}
+
+
+button {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    box-shadow: var(--bg-hover-color) 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 100%;
+}
